@@ -1,19 +1,18 @@
 package producer.consumer.semaphore;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Deque;
 import java.util.concurrent.ConcurrentLinkedDeque;
 
 public class Store {
-  private int maxSize;
-  private ConcurrentLinkedDeque<Object> items;
+  private final int maxSize;
+  private final Deque<Object> items;
 
   public Store(int maxSize) {
     this.maxSize = maxSize;
     this.items = new ConcurrentLinkedDeque<>();
   }
 
-  public ConcurrentLinkedDeque<Object> getItems() {
+  public Deque<Object> getItems() {
     return items;
   }
 
