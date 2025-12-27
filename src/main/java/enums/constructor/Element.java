@@ -9,7 +9,6 @@ public enum Element {
   C("Carbon", 6),
   N("Nitrogen", 7);
 
-
   private String name;
   private Integer atomicNumber;
 
