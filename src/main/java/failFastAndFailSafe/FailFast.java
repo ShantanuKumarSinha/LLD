@@ -24,11 +24,11 @@ public class FailFast {
     List<Integer> numberList = new ArrayList<>(List.of(1, 2, 4));
     var numIterator = numberList.iterator();
     // Adding something will throw ConcurrentModificationException
-    //    while (numIterator.hasNext()) {
-    //      var number = numIterator.next();
-    //      if (number == 2) numberList.add(3);
-    //      System.out.println(number);
-    //    }
+//        while (numIterator.hasNext()) {
+//          var number = numIterator.next();
+//          if (number == 2) numberList.add(3);
+//          System.out.println(number);
+//        }
     // Calling remove method of iterator will not throw ConcurrentModificationException
     var numberIterator = numberList.iterator();
     while (numberIterator.hasNext()) {
@@ -36,7 +36,7 @@ public class FailFast {
       if (number == 2) {
         numberIterator.remove();
         // If we call remove method again without calling next() it will throw IllegalStateException
-        // numberIterator.remove();
+        //numberIterator.remove();
       }
       System.out.println(number);
     }

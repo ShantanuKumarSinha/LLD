@@ -16,13 +16,19 @@ public class MovieSelector {
     System.out.println(listOfMovies);
     // By Default all movies will be added based on movie name in ascending order
     Collections.sort(listOfMovies);
+    // or you can do this also with sort method and null comparator
+    // listOfMovies.sort(null);
     System.out.println("After sorting");
     System.out.println(listOfMovies);
     // We need custom sorting based on rating
     Collections.sort(listOfMovies, (a, b) -> Double.compare(b.rating(), a.rating()));
     listOfMovies.sort((a, b) -> Double.compare(b.rating(), a.rating()));
-    listOfMovies.stream().sorted((a, b) -> Double.compare(b.rating(), a.rating()));
     System.out.println("After sorting based on rating");
     System.out.println(listOfMovies);
+    // this returns a sorted stream but does not modify the original list
+    var ratingWiseSortedMovieList =
+        listOfMovies.stream().sorted((a, b) -> Double.compare(b.rating(), a.rating())).toList();
+    System.out.println("After sorting based on rating using stream");
+    System.out.println(ratingWiseSortedMovieList);
   }
 }
