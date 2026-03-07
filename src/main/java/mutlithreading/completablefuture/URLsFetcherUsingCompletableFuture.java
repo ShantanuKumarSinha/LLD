@@ -1,4 +1,4 @@
-package mutlithreading.problems.completablefuture;
+package mutlithreading.completablefuture;
 
 import java.net.MalformedURLException;
 import java.net.URI;

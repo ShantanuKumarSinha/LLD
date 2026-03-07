@@ -1,4 +1,4 @@
-package mutlithreading.problems.completablefuture;
+package mutlithreading.completablefuture;
 
 import java.util.Arrays;
 import java.util.concurrent.CompletableFuture;
